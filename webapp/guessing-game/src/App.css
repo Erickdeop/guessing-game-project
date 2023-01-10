@@ -1,22 +1,24 @@
-* {
-  box-sizing: border-box;
-  color: #333;
-}
-
 body {
-  background-color: #3b3b46;
+  background-color: #282D3D;
   margin: 0;
+  padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.initial {
-  display: flex;
+.App{
+  width:100vw;
+  height:100vh;
+}
+
+.Game-form {
+  display:flexbox;
+  width: fit-content;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   -webkit-text-fill-color: azure;
 }
-.guess-number-box {
+.Guess-number-box {
   -webkit-text-fill-color: rgb(87, 87, 87);
   display: flex;
   flex-direction: row;
@@ -30,3 +32,39 @@ body {
 
 }
 
+.Sidebar {
+  height: 100%;
+  width: 250px;
+  background-color: #0C64CA;
+}
+
+@keyframes rainbow {
+  0% {
+    color: rgb(0, 0, 255); /* blue */
+  }
+  25% {
+    color: rgb(0, 0, 128); /* deep blue */
+  }
+  50% {
+    color: rgb(255, 0, 255); /* pink */
+  }
+  75% {
+    color: rgb(128, 0, 128); /* purple */
+  }
+  100% {
+    color: rgb(0, 0, 255); /* blue */
+  }
+}
+@keyframes cascade {
+  0% {
+    transform: translate(0,0);
+  }
+  100% {
+    transform: translate(0,100px);
+  }
+}
+.Falling-numbers {
+  animation: cascade 1.0s infinite linear, rainbow2 0.4s infinite linear;
+  display: inline-block;
+  font-size: 30px;
+}
