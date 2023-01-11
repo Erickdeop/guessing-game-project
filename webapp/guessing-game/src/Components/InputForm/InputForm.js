@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from '@mui/material/Button';
 
 const InputForm = ({onAddNumber}) => {
     const [number, setNumber] = useState("");
@@ -17,7 +18,10 @@ const InputForm = ({onAddNumber}) => {
                     placeholder="Input your guess"
                 />
             </label>
-            <button onClick={(handleClick)}>Guess!</button>
+            <Button 
+                onClick={(handleClick)}
+                variant="contained"       
+            >Guess!</Button>
         </div>
     )
 }

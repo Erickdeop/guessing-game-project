@@ -3,31 +3,33 @@ import HomeIcon from '@mui/icons-material/Home';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import MoneyIcon from '@mui/icons-material/Money';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import ViewHeadlineIcon from '@mui/icons-material/ViewHeadline';
 
 export const SidebarData = [
     {
-        title: "home",
+        title: "Home",
         icon: <HomeIcon />,
-        link: "/home"
+        link: "/home",
     },
     {
-        title: "leaderboard",
+        title: "Leaderboard",
         icon: <LeaderboardIcon />,
-        link: "/leaderboard"
+        link: "/leaderboard",
     },
     {
-        title: "games",
-        icon: <HomeIcon />,
-        link: "/games"
+        title: "Games",
+        icon: <SportsEsportsIcon />,
+        link: "/games",
     },
     {
-        title: "guessNumber",
+        title: "Guess the Number",
         icon: <MoneyIcon />,
-        link: "/home"
+        link: "/guessNumber",
     },
     {
-        title: "settings",
+        title: "Settings",
         icon: <SettingsIcon />,
-        link: "/settings"
-    }
-]
+        link: "/settings",
+    },
+];
