@@ -1,4 +1,4 @@
-package tabia.training.app;
+package tabia.training;
 
 import java.util.Scanner;
 

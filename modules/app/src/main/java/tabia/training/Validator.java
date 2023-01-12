@@ -1,4 +1,4 @@
-package tabia.training.app;
+package tabia.training;
 
 public class Validator {
     public boolean isNumeric(String string){
@@ -12,8 +12,9 @@ public class Validator {
             return true;
         }
         catch (NumberFormatException e){
-            System.out.print("Input is not a number. ");
+            System.out.print(NaN());
         }
         return false;
     }
+    public String NaN(){ return "Input is not a number"; }
 }

@@ -18,7 +18,7 @@ const InputForm = ({onAddNumber}) => {
                     placeholder="Input your guess"
                 />
             </label>
-            <Button 
+            <Button className=""
                 onClick={(handleClick)}
                 variant="contained"       
             >Guess!</Button>

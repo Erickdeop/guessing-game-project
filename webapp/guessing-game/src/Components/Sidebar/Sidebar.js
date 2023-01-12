@@ -5,7 +5,6 @@ import { SidebarData } from "./SidebarData";
 
 const Sidebar = ({children}) => {
     
-    
     return (
         <div className='Sidebar'>
             <ul className='SidebarList'>
