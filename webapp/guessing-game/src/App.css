@@ -34,10 +34,15 @@ body {
   margin: 0px 0px 0px 0px;
   padding: 35px 15px 15px 15px;
 }
+.Guess-button{
+  -webkit-text-fill-color: azure;
+  background-color: #462F99;
+}
+
 .Sidebar {
   height: 100%;
   width: 250px;
-  background-color: #0C64CA;
+  background-color: #462f99;
 }
 
 .SidebarList {
@@ -60,11 +65,10 @@ body {
 
 .SidebarList .row:hover{
   cursor: pointer;
-  background-color:#0c57ad;
+  background-color:#4832c2;
 }
 .SidebarList #active{
-  background-color: #0c57ad
-  ;
+  background-color: #4832c2  ;
 }
 
 .row #icon {

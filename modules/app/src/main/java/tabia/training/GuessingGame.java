@@ -1,5 +1,6 @@
 package tabia.training;
 import java.util.Scanner;
+import tabia.training.services.CheckNumberService;
 
 public class GuessingGame
 {
@@ -11,21 +12,22 @@ public class GuessingGame
     public void setTries(int tries) {
         this.tries = tries;
     }
-    public boolean guessNumber(Player player, int rand){
+    public boolean GuessNumber(Player player, int rand){
         Scanner input = new Scanner(System.in);
-
         String cond;
+        CheckNumberService verify = new CheckNumberService();
 
         while (tries != 0){
-            System.out.println("\n"+HowManyTries(tries));
+            System.out.println("\n"+HowManyTries());
             player.setPlayerNumber();
 
             int number = player.getPlayerNumber();
-            if (CheckNumber(number, rand) == true){
+
+            if (verify.CheckNumber(number, rand)){
                 break;
             }
             else{
-                tries--;
+                setTries(--tries);
             }
         }
         if (tries==0){
@@ -47,20 +49,9 @@ public class GuessingGame
             System.out.println("Not a valid input.");
         }
     }
-    public boolean CheckNumber(int number, int rand){
-        if (number == rand){
-            System.out.println("Congratulations! You guessed the number");
-            return true;
-        }
-        else if (number < rand) {
-            System.out.println("The number is greater than this.");
-        }
-        else if (number > rand) {
-            System.out.println("The number is lesser than this.");
-        }
-        return false;
+
+    public String HowManyTries(){
+        return "You still have " +getTries()+ " tries.";
     }
-    public String HowManyTries(int tries){
-        return "You still have " +tries+ " tries.";
-    }
+
 }
